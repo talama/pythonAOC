@@ -11,8 +11,8 @@ def calc_dist(left, right):
 
 
 def calc_similarity(left, right):
-    right_counts = Counter(right)
-    return sum(num * right_counts[num] for num in left if num in right_counts)
+    right_map = Counter(right)
+    return sum(num * right_map[num] for num in left if num in right_map)
 
 
 if __name__ == "__main__":
